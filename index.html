@@ -4,30 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Marcos Gabriel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Marcos.Dev</div>
-        <div class="nav-links">
+    <!-- Progresso de Rolagem da Página -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav id="navbar">
+        <a href="#home" class="logo">Marcos.Dev</a>
+        
+        <!-- Menu Hambúrguer -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
             <a href="#home">Início</a>
             <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
             <a href="#education">Formação</a>
             <a href="#projects">Projetos</a>
+            <a href="#terminal-section">Terminal</a>
             <a href="#contact">Contato</a>
         </div>
     </nav>
 
+    <!-- Seção Hero -->
     <section id="home" class="hero hidden">
         <div class="hero-text">
-            <h3>Prazer, meu nome é</h3>
+            <h3 class="intro-text">Prazer, meu nome é</h3>
             <h1>Marcos Gabriel</h1>
-            <h3>Estudante de <span class="highlight">Engenharia de Software e ADS</span></h3>
-            <p>Focando em Back-end utilizando Java e Python, e aprofundamento em <span class="highlight">Ethical Hacking</span>.</p>
-            <a href="#projects" class="btn">Ver Meus Projetos</a>
+            <h3 class="typing-container">Estudante de <span class="typing-text"></span><span class="cursor"></span></h3>
+            <p>Focado em desenvolvimento Back-end utilizando <strong>Java</strong> e <strong>Python</strong>, e aprofundando conhecimentos práticos em <strong>Cybersecurity</strong> e <strong>Ethical Hacking</strong>.</p>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="btn">Ver Meus Projetos <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
+                <a href="#contact" class="btn-secondary">Entrar em Contato</a>
+            </div>
         </div>
 
         <div class="hero-img">
@@ -35,130 +55,121 @@
         </div>
     </section>
 
+    <!-- Seção Sobre -->
     <section id="about" class="hidden">
         <h2>Sobre <span class="highlight">Mim</span></h2>
         <div class="about-content">
             <div class="about-text">
-                <p class="about-title">Olá me Chamo Marcos Gabriel, Futuro Engenheiro de Software e Analista de Sistemas</p>
-                <br>
-                <p>Atualmente eu sou estudante com sólida formação em Engenharia de Software e Análise e Desenvolvimento de Sistemas (ADS). Possuo profunda imersão em desenvolvimento <strong>Back-end</strong>, com proficiência avançada nas linguagens Python e Java. Meu foco atual está na área de Segurança Cibernética e Ethical Hacking, buscando aplicar o conhecimento em software para identificar vulnerabilidades e construir sistemas intrinsecamente seguros. Compromisso com a inovação e o aprendizado contínuo no universo da tecnologia.</p>
+                <p class="about-title">Olá, me chamo Marcos Gabriel, futuro Engenheiro de Software e Analista de Sistemas</p>
+                <p>Atualmente, sou estudante com sólida formação em Engenharia de Software e Análise e Desenvolvimento de Sistemas (ADS). Possuo profunda imersão em desenvolvimento <strong>Back-end</strong>, com proficiência nas linguagens Python e Java.</p>
+                <p>Meu foco principal está na área de Segurança Cibernética e Ethical Hacking, buscando aplicar meus conhecimentos em software para identificar vulnerabilidades e construir sistemas intrinsecamente seguros e resilientes. Sou motivado por inovação, desafios complexos e pelo aprendizado contínuo no dinâmico ecossistema da tecnologia.</p>
             </div>
         </div>
     </section>
 
-    <section id="education" class="hidden">
-        <h2>Minha <span class="highlight">Formação</span></h2>
-
-        <h3 class="edu-subtitle"><i class="fas fa-graduation-cap"></i> Graduações</h3>
-        <div class="education-container">
+    <!-- Seção Habilidades -->
+    <section id="skills" class="hidden">
+        <h2>Minhas <span class="highlight">Habilidades</span></h2>
+        <div class="skills-container">
             
-            <div class="edu-card">
-                <h3>Engenharia de Software</h3>
-                <span class="edu-school">Universidade Univassouras</span>
-                <span class="edu-year" style="color: aqua;">Em andamento</span>
-                <p>Bacharelado focado na arquitetura, desenvolvimento e gestão de sistemas complexos.</p>
+            <!-- Categoria 1: Back-End -->
+            <div class="skills-category">
+                <h3><i class="fas fa-server"></i> Desenvolvimento Back-End</h3>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Java & OOP</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python & Automação</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Bancos de Dados SQL</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="edu-card">
-                <h3>Análise e Desenv. de Sistemas</h3>
-                <span class="edu-school">Centro Universitário Internacional</span>
-                <span class="edu-year" style="color: aqua;">Em andamento</span>
-                <p>Formação tecnológica com foco prático em programação e banco de dados.</p>
+            <!-- Categoria 2: Cybersecurity -->
+            <div class="skills-category">
+                <h3><i class="fas fa-shield-halved"></i> Cybersecurity</h3>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Kali Linux & Pentesting Tools</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Análise de Vulnerabilidades</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Segurança de Redes e Aplicações</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="65%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
-
-        <h3 class="edu-subtitle" style="margin-top: 50px;"><i class="fas fa-certificate"></i> Cursos & Extensão</h3>
-        <div class="education-container">
-
-            <div class="edu-card">
-                <h3>Hacker Ético Profissional com Kali Linux v2025</h3>
-                <span class="edu-school" style="color: aqua;">Em Andamento</span>
-                <span class="edu-school">Udemy/Vitor Mazuko</span>
-                <span class="edu-year">2025</span>
-                <p>Conceitos Básicos ao avançado de Hacking Ético</p>
-            </div>
-
-            <div class="edu-card">
-                <h3>Maratona Java Virado no Jiraya</h3>
-                <span class="edu-school" style="color: aqua;">Em Andamento</span>
-                <span class="edu-school">YouTube/DevDojo</span>
-                <span class="edu-year">2025</span>
-                <p>Básico ao Avançado de Java para desenvolvimento de Softwares</p>
-            </div>
-            
-            <div class="edu-card">
-                <h3>HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags</h3>
-                <span class="edu-school" style="color: aqua;">Concluido</span>
-                <span class="edu-school">Alura</span>
-                <span class="edu-year">2025</span>
-                <p>Introdução de HTML e CSS para a criação de sites com conceitos básicos</p>
-                <a href="https://cursos.alura.com.br/certificate/ba6655e3-dd1e-4718-87ce-49a7e03952f2?lang" target="_blank" class="btn-certificate">
-                    <i class="fas fa-file-alt"></i> Ver Certificado
-                </a>
-            </div>
-
-            <div class="edu-card">
-                <h3>HTML e CSS: Classes, posicionamento e Flexbox</h3>
-                <span class="edu-school" style="color: aqua;">Concluido</span>
-                <span class="edu-school">Alura</span>
-                <span class="edu-year">2025</span>
-                <p>Criação de Sites Utilizando HTML e CSS</p>
-                <a href="https://cursos.alura.com.br/certificate/750c34d8-cd25-42a0-bf83-c6c7eaba70bb?lang" target="_blank" class="btn-certificate">
-                    <i class="fas fa-file-alt"></i> Ver Certificado
-                </a>
-            </div>
-
-            <div class="edu-card">
-                <h3>Imersão Dados com Python</h3>
-                <span class="edu-school" style="color: aqua;">Concluido</span>
-                <span class="edu-school">Alura</span>
-                <span class="edu-year">2025</span>
-                <p>Imersão focada na utilização de Bibliotecas Python para manipulação de Dados</p>
-                <a href="https://cursos.alura.com.br/immersion/certificate/84a77850-7f6c-474b-8740-20d3e5ac57b0?lang" target="_blank" class="btn-certificate">
-                    <i class="fas fa-file-alt"></i> Ver Certificado
-                </a>
-            </div>
-
-            <div class="edu-card">
-                <h3>Imersão IA 3ª Edição</h3>
-                <span class="edu-school" style="color: aqua;">Concluido</span>
-                <span class="edu-school">Alura</span>
-                <span class="edu-year">2025</span>
-                <p>Desenvolvimento de APIs, estrutura de dados e algoritmos utilizando IA.</p>
-                <a href="https://cursos.alura.com.br/immersion/certificate/6b10aa7f-ae5e-49cc-a16a-3d56d89b5d0c?lang" target="_blank" class="btn-certificate">
-                    <i class="fas fa-file-alt"></i> Ver Certificado
-                </a>
-            </div>
-
-            <div class="edu-card">
-                <h3>Imersão Dev 9ª Edição</h3>
-                <span class="edu-school" style="color: aqua;">Concluido</span>
-                <span class="edu-school">Alura</span>
-                <span class="edu-year">2025</span>
-                <p>Desenvolvimento de APIs, estrutura de dados e algoritmos.</p>
-                <a href="https://cursos.alura.com.br/immersion/certificate/84a77850-7f6c-474b-8740-20d3e5ac57b0?lang" target="_blank" class="btn-certificate">
-                    <i class="fas fa-file-alt"></i> Ver Certificado
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="projects" class="hidden">
-        <h2>Meus <span class="highlight">Projetos</span></h2>
-        <div class="projects-container">
-            
-            <div class="project-card">
-                <img src="imgs/logo-Legendary-Adventure.png" alt="Projeto RPG" class="project-img">
-                <div class="project-info">
-                    <h4>Legendary Adventure</h4>
-                    <p>Um jogo de aventura em texto desenvolvido totalmente em Python, com sistema de batalha e inventário.</p>
-                    <div style="margin-top: 15px;">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Lógica</span>
-                        <br><br>
-                        <a href="https://github.com/MarcosPires04/legendary-adventure" class="btn-github">Ver Código</a>
+            <!-- Categoria 3: Outros -->
+            <div class="skills-category">
+                <h3><i class="fas fa-cube"></i> Tecnologias Web & Tools</h3>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5 / CSS3 / JavaScript</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Lógica de Programação & Estruturas</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-width="90%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,18 +177,242 @@
         </div>
     </section>
 
+    <!-- Seção Formação -->
+    <section id="education" class="hidden">
+        <h2>Minha <span class="highlight">Formação</span></h2>
+
+        <!-- Filtros de Formação -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Tudo</button>
+            <button class="filter-btn" data-filter="degree">Graduações</button>
+            <button class="filter-btn" data-filter="course">Cursos & Extensão</button>
+        </div>
+
+        <div class="timeline" id="timelineContainer">
+            
+            <!-- Graduação 1 -->
+            <div class="timeline-item left" data-category="degree">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-graduation-cap"></i> Universidade Univassouras</span>
+                    <span class="edu-year">Em andamento (Bacharelado)</span>
+                    <h3>Engenharia de Software</h3>
+                    <p>Foco na arquitetura de software, engenharia de requisitos, metodologias ágeis e gerenciamento de sistemas complexos.</p>
+                </div>
+            </div>
+
+            <!-- Graduação 2 -->
+            <div class="timeline-item right" data-category="degree">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-graduation-cap"></i> Centro Universitário Internacional</span>
+                    <span class="edu-year">Em andamento (Tecnólogo)</span>
+                    <h3>Análise e Desenv. de Sistemas</h3>
+                    <p>Formação voltada para a modelagem prática de sistemas, bancos de dados relacionais e desenvolvimento rápido de aplicações.</p>
+                </div>
+            </div>
+
+            <!-- Curso 1 -->
+            <div class="timeline-item left" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> Udemy / Vitor Mazuko</span>
+                    <span class="edu-year">2025 (Em Andamento)</span>
+                    <h3>Hacker Ético Profissional com Kali Linux v2025</h3>
+                    <p>Aborda conceitos do básico ao avançado de hacking ético, scanners de vulnerabilidade e invasão simulada autorizada.</p>
+                </div>
+            </div>
+
+            <!-- Curso 2 -->
+            <div class="timeline-item right" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> YouTube / DevDojo</span>
+                    <span class="edu-year">2025 (Em Andamento)</span>
+                    <h3>Maratona Java Virado no Jiraya</h3>
+                    <p>Formação extensiva abordando programação concorrente, coleções, I/O, JDBC e conceitos robustos de Java SE.</p>
+                </div>
+            </div>
+            
+            <!-- Certificado 1 -->
+            <div class="timeline-item left" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> Alura</span>
+                    <span class="edu-year">2025 (Concluído)</span>
+                    <h3>HTML e CSS: ambientes de desenvolvimento, estrutura e tags</h3>
+                    <p>Introdução prática no desenvolvimento web moderno utilizando marcação semântica.</p>
+                    <a href="https://cursos.alura.com.br/certificate/ba6655e3-dd1e-4718-87ce-49a7e03952f2?lang" target="_blank" class="btn-certificate">
+                        <i class="fas fa-file-alt"></i> Ver Certificado
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificado 2 -->
+            <div class="timeline-item right" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> Alura</span>
+                    <span class="edu-year">2025 (Concluído)</span>
+                    <h3>HTML e CSS: Classes, posicionamento e Flexbox</h3>
+                    <p>Aprendizado prático sobre o posicionamento de elementos e criação de layouts flexíveis.</p>
+                    <a href="https://cursos.alura.com.br/certificate/750c34d8-cd25-42a0-bf83-c6c7eaba70bb?lang" target="_blank" class="btn-certificate">
+                        <i class="fas fa-file-alt"></i> Ver Certificado
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificado 3 -->
+            <div class="timeline-item left" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> Alura</span>
+                    <span class="edu-year">2025 (Concluído)</span>
+                    <h3>Imersão Dados com Python</h3>
+                    <p>Manipulação, análise exploratória de dados e plotagem gráfica usando Python no ambiente Jupyter Notebook.</p>
+                    <a href="https://cursos.alura.com.br/immersion/certificate/84a77850-7f6c-474b-8740-20d3e5ac57b0?lang" target="_blank" class="btn-certificate">
+                        <i class="fas fa-file-alt"></i> Ver Certificado
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificado 4 -->
+            <div class="timeline-item right" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> Alura</span>
+                    <span class="edu-year">2025 (Concluído)</span>
+                    <h3>Imersão IA 3ª Edição</h3>
+                    <p>Criação de prompts inteligentes e consumo de APIs de IA para automação de tarefas cotidianas de codificação.</p>
+                    <a href="https://cursos.alura.com.br/immersion/certificate/6b10aa7f-ae5e-49cc-a16a-3d56d89b5d0c?lang" target="_blank" class="btn-certificate">
+                        <i class="fas fa-file-alt"></i> Ver Certificado
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificado 5 -->
+            <div class="timeline-item left" data-category="course">
+                <div class="timeline-content">
+                    <span class="edu-school"><i class="fas fa-certificate"></i> Alura</span>
+                    <span class="edu-year">2025 (Concluído)</span>
+                    <h3>Imersão Dev 9ª Edição</h3>
+                    <p>Desafios rápidos em programação JavaScript construindo jogos e conversores dinâmicos.</p>
+                    <a href="https://cursos.alura.com.br/immersion/certificate/84a77850-7f6c-474b-8740-20d3e5ac57b0?lang" target="_blank" class="btn-certificate">
+                        <i class="fas fa-file-alt"></i> Ver Certificado
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="hidden">
+        <h2>Meus <span class="highlight">Projetos</span></h2>
+        <div class="projects-container">
+            
+            <!-- Projeto 1: Legendary Adventure -->
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="imgs/logo-Legendary-Adventure.png" alt="Projeto RPG Legendary Adventure" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h4>Legendary Adventure</h4>
+                    <p>Um jogo de RPG de aventura textual interativa desenvolvido inteiramente em Python, contendo sistema de batalhas dinâmico, gerenciador de inventário e caminhos ramificados.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Lógica POO</span>
+                        <span class="tech-tag">Game Design</span>
+                    </div>
+                    <a href="https://github.com/MarcosPires04/legendary-adventure" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projeto 2: NetWatch -->
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="imgs/netwatch_preview.png" alt="NetWatch Network Diagnostics" class="project-img" style="object-fit: cover; padding: 0;">
+                </div>
+                <div class="project-info">
+                    <h4>NetWatch</h4>
+                    <p>Um toolkit moderno em CLI (Interface de Linha de Comando) focado em diagnósticos de rede e monitoramento de internet. Inclui utilitários para análise de latência, teste de velocidade, geolocalização de IP, scanner de portas de rede e monitoramento de sistema em tempo real.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Rich (CLI UI)</span>
+                        <span class="tech-tag">Typer</span>
+                        <span class="tech-tag">Cybersecurity</span>
+                    </div>
+                    <a href="https://github.com/shoowt/NetWatch" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção Terminal Interativo (Cybersecurity) -->
+    <section id="terminal-section" class="hidden">
+        <h2>Terminal <span class="highlight">Interativo</span></h2>
+        <p style="text-align: center; max-width: 600px; margin: -30px auto 30px auto; color: var(--text-muted);">
+            Explore minhas qualificações e curiosidades diretamente da linha de comando abaixo.
+        </p>
+        
+        <div class="terminal-wrapper">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="terminal-btn close"></div>
+                    <div class="terminal-btn minimize"></div>
+                    <div class="terminal-btn maximize"></div>
+                </div>
+                <div class="terminal-title">
+                    <i class="fas fa-terminal"></i> guest@marcosdev:~
+                </div>
+                <div style="width: 50px;"></div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-log" id="terminalLog">
+                    <div class="terminal-welcome">
+                        [+] Conexão segura estabelecida com Marcos.Dev...<br>
+                        [+] Sistema Operacional: MarcosOS v1.1.0<br>
+                        [+] Digite <span style="color: #8b5cf6; font-weight: bold;">help</span> para listar os comandos disponíveis e interagir.
+                    </div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">guest@marcosdev:~$</span>
+                    <input type="text" id="terminalInput" class="terminal-input" autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
     <section id="contact" class="hidden">
         <h2>Vamos <span class="highlight">Conversar?</span></h2>
-        <p>Estou disponível para projetos freelance e oportunidades de estágio.</p>
+        <p style="color: var(--text-muted); max-width: 500px; margin: -30px auto 30px auto;">
+            Estou aberto a novas oportunidades de estágio, projetos de desenvolvimento Back-end ou discussões sobre segurança.
+        </p>
         
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" class="form-input" placeholder=" " required>
+                    <label for="name" class="form-label">Seu Nome</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" class="form-input" placeholder=" " required>
+                    <label for="email" class="form-label">Seu E-mail</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" class="form-input" placeholder=" " required></textarea>
+                    <label for="message" class="form-label">Sua Mensagem</label>
+                </div>
+                <button type="submit" class="btn contact-btn">Enviar Mensagem <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+            </form>
+        </div>
+
         <div class="social-icons">
-            <a href="https://github.com/MarcosPires04" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/marcosspires/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/prod.shoowt/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/MarcosPires04" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/marcosspires/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/prod.shoowt/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
         
-        <footer style="margin-top: 50px; font-size: 0.8rem; color: #94a3b8;">
-            <p>Desenvolvido por Marcos Gabriel &copy; 2025</p>
+        <footer>
+            <p>Desenvolvido por Marcos Gabriel &copy; 2026</p>
         </footer>
     </section>
 
