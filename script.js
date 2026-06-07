@@ -194,8 +194,17 @@ function executeCommand(cmd) {
             break;
         case 'projects':
             printToTerminal(`[+] Projetos Encontrados:<br>
-  1. <strong>Legendary Adventure</strong>: Jogo de RPG de aventura textual interativa desenvolvido em Python.<br>
-  2. <strong>NetWatch</strong>: Toolkit moderno em CLI para diagnósticos de rede e monitoramento em Python.`);
+  1. <strong>Legendary Adventure</strong>: RPG de aventura textual interativa em Python.<br>
+  2. <strong>NetWatch</strong>: Toolkit CLI para diagnósticos de rede em Python.<br>
+  3. <strong>Advocacia Premium</strong>: Landing page corporativa elegante para advogados.<br>
+  4. <strong>Calculadora Financeira</strong>: Calculadora de juros compostos e amortizações.<br>
+  5. <strong>Clínica Estética Premium</strong>: Portal moderno para clínicas de estética e bem-estar.<br>
+  6. <strong>Dashboard Organizações</strong>: Painel administrativo com gráficos corporativos.<br>
+  7. <strong>Gerador QR Code Pix</strong>: Gerador estático de cobranças instantâneas Pix.<br>
+  8. <strong>Hamburgueria Gourmet</strong>: Cardápio interativo e sistema de pedidos de hambúrguer.<br>
+  9. <strong>Landing Page de Conversão</strong>: Página de captura altamente otimizada para SEO.<br>
+  10. <strong>Portal Cliente Faturamento</strong>: Painel B2B para boletos e faturas corporativas.<br>
+  11. <strong>SmartHome Dashboard</strong>: Interface de automação residencial simulada.`);
             break;
         case 'contact':
             printToTerminal(`[+] Redes Sociais & Contato:<br>
